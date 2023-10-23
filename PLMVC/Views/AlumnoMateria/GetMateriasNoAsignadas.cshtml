@@ -1,0 +1,54 @@
+﻿@model ML.AlumnoMateria
+@{
+    ViewBag.Title = "GetMateriasNoAsignadas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetMaterias No Asignadas</h2>
+
+<br />
+<div class="row">
+    <div class="col-md-2">
+        @Html.TextBoxFor(model => model.Alumno.Nombre, new { @class = "form-control", disabled = "true" })
+    </div>
+    <div class="col-md-2">
+        @Html.TextBoxFor(model => model.Alumno.Nombre, new { @class = "form-control", disabled = "true" })
+    </div>
+    <div class="col-md-2">
+        @Html.TextBoxFor(model => model.Alumno.Nombre, new { @class = "form-control", disabled = "true" })
+    </div>
+</div>
+<br />
+@if (Model.Materia.Materias.Count != 0)
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID ASIGNADA</th>
+                    <th>NOMBRE MATERIA</th>
+                    <th>COSTO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ML.AlumnoMateria registro in Model.Materia.Materias)
+                {
+                    <tr>
+                        <td>@registro.Materia.IdMateria</td>
+                        <td>@registro.Materia.Nombre</td>
+                        <td>@registro.Materia.Costo</td>
+                        <td> <a href="@Url.Action("","")" class="btn btn-success"><i class="bi bi-file-earmark-plus-fill"></i> ASIGNAR</a> </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        NO HAY MATERIAS PARA ASIGNAR
+    </div>
+}
+<br />
+<a href="@Url.Action("GetMateriasAsignadas","AlumnoMateria", new {idAlumno = Session["idAlumno"] })" class="btn btn-danger"> VOLVER</a>

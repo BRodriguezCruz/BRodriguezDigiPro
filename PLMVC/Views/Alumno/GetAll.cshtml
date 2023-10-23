@@ -1,0 +1,36 @@
+﻿@model ML.Alumno
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LISTA GENERAL DE ALUMNOS</h2>
+
+<div class="table-responsive">
+    <table class="table table-borderless table-striped table-hover" >
+        <thead>
+            <tr>
+                <th>EDITAR</th>
+                <th>ID ALUMNO</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO PATERNO</th>
+                <th>APELLIDO MATERNO</th>
+                <th>ELIMINAR</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ML.Alumno registro in Model.Alumnos)
+            {
+                <tr>
+                    <td> <a href="@Url.Action("Form","Alumno", new {idAlumno = registro.IdAlumno})" class="btn btn-warning">EDITAR</a> </td>
+                    <td>@registro.IdAlumno</td>
+                    <td>@registro.Nombre</td>
+                    <td>@registro.ApellidoPaterno</td>
+                    <td>@registro.ApellidoMaterno</td>
+                    <td> <a href="@Url.Action("Delete", "Alumno", new {idAlumno = registro.IdAlumno})" onclick="return confirm ('¿SEGURO QUE DESEAS ELIMINAR EL REGISTRO?')" class="btn btn-danger">ELIMINAR</a> </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<a class="btn btn-outline-success" href="@Url.Action("Form","Alumno")">AGREGAR NUEVO ALUMNO</a>

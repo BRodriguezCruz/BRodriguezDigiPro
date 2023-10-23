@@ -1,0 +1,41 @@
+﻿@model ML.Alumno
+@{
+    ViewBag.Title = "GetAllAlumnos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetAllAlumnos</h2>
+
+@if (Model.Alumnos.Count != 0)
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID ALUMNO</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO PATERNO</th>
+                    <th>APELLIDO MATERNO</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ML.Alumno registro in Model.Alumnos)
+                {
+                    <tr>
+                        <td>@registro.IdAlumno</td>
+                        <td>@registro.Nombre</td>
+                        <td>@registro.ApellidoPaterno</td>
+                        <td>@registro.ApellidoMaterno</td>
+                        <td> <a href="@Url.Action("GetMateriasAsignadas","AlumnoMateria", new {idAlumno = registro.IdAlumno})" class="btn btn-success"><i class="bi bi-bag-plus-fill"></i>  AÑADIR</a> </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-danger" role="alert">
+        NO HAY AUMNOS REGISTRADOS 
+    </div>
+}

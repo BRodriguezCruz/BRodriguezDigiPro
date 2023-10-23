@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="a39160af-63f6-49eb-bdde-3ae70e3f3cc3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55248/AlumnoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AlumnoService.xsd" MetadataType="Schema" ID="36ab915e-a38e-4bd9-b943-035f1a8d8105" SourceId="1" SourceUrl="http://localhost:55248/AlumnoService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AlumnoService1.xsd" MetadataType="Schema" ID="13dfb712-69f3-471d-9d3e-d92c6ab152bf" SourceId="1" SourceUrl="http://localhost:55248/AlumnoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AlumnoService2.xsd" MetadataType="Schema" ID="6d4a3285-ae9e-4cfc-951f-0b5f99f71fc1" SourceId="1" SourceUrl="http://localhost:55248/AlumnoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AlumnoService.disco" MetadataType="Disco" ID="7352ce19-5390-423b-b7b2-de28741afd6b" SourceId="1" SourceUrl="http://localhost:55248/AlumnoService.svc?disco" />
+    <MetadataFile FileName="AlumnoService.wsdl" MetadataType="Wsdl" ID="c209c9dc-38ec-4891-8153-535581d2ff26" SourceId="1" SourceUrl="http://localhost:55248/AlumnoService.svc?wsdl" />
+    <MetadataFile FileName="AlumnoService3.xsd" MetadataType="Schema" ID="c88c1cd7-cd42-43de-af40-422b824e4047" SourceId="1" SourceUrl="http://localhost:55248/AlumnoService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AlumnoService4.xsd" MetadataType="Schema" ID="1132c35b-1c65-4029-a576-9b114555fa7b" SourceId="1" SourceUrl="http://localhost:55248/AlumnoService.svc?xsd=xsd5" />
+    <MetadataFile FileName="AlumnoService5.xsd" MetadataType="Schema" ID="61e6afe6-e03a-4579-9f29-5667f98ab890" SourceId="1" SourceUrl="http://localhost:55248/AlumnoService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
